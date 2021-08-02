@@ -1,0 +1,26 @@
+Hi here will be some notes about python Django :)))
+
+To create virtual environment: 
+>python -m venv venv(creates venv with name "venv")
+>deactivate(to deactivate venv)
+
+To install Django:
+>pip install Django
+
+To show list of commands:
+>django-admin
+
+To create new project:
+>django-admin startproject "name of project"
+
+manage.py > settings-file which helps to operate with project (run commands, create users, files)
+settings.py > settings-file which contains (db-data,paths to apps,data time)
+urls.py > settings-file which contains (routes of project)
+
+To start server:
+>python manage.py runserver
+
+MVC = MTV
+Model = Model
+View = Template
+Controller = View
