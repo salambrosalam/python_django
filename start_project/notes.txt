@@ -24,3 +24,31 @@ MVC = MTV
 Model = Model
 View = Template
 Controller = View
+
+Migration file:
+this file create tables,db ...
+>python manage.py makemigrations (creates a migration file)
+>python manage.py sqlmigrate news 0001 (will show a SQL query to create table)
+>python manage.py migrate (to execute all sql query's for migration)
+>python manage.py shell (to start django shell)
+
+CRUD:
+
+Create:
+
+Models in Django so LAZY:
+It's mean that if you will create model, this model will not execute until you will not run .save() or News.objects.create()
+
+Read:
+>News.objects.all() (to get all data of current model)
+>News.objects.filter(title="Новость 1") (to get all data with title - "Новость 1") возвращает список
+>News.objects.get(title="Новость 1") (to get all data with title - "Новость 1") возвращает один элемент, быть осторожным так как при возврате нескольких элементов будет исключение
+>News.objects.exclude(title="Новость 1") (to get all data WITHOUT "Новость 1")
+
+Update:
+>news1.title = "new title" (to update data)
+
+Delete:
+>news1.delete() (to delete data)
+
+
