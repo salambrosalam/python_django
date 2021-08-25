@@ -51,4 +51,8 @@ Update:
 Delete:
 >news1.delete() (to delete data)
 
+Admins panel:
+>python manage.py createsuperuser(to create super user for admin panel)
+
+
 
