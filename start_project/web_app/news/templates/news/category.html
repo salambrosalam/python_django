@@ -23,7 +23,7 @@
           <a class="nav-link active" aria-current="page" href="#">Главная</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Добавить новость</a>
+          <a class="nav-link" href="#">Add supplier</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -33,7 +33,7 @@
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Description</a></li>
           </ul>
         </li>
         <li class="nav-item">
@@ -63,7 +63,7 @@
         {% for item in news %}
         <div class="card mb-3">
   <div class="card-header">
-      Категория: {{ item.category.title }}
+      Category: {{ item.category.title }}
   </div>
   <div class="card-body">
     <h5 class="card-title {% cycle 'text-danger' 'text-success' %}">{{ item.title }}</h5>
@@ -73,7 +73,7 @@
     {% else %}
       <img src= "https://picsum.photos/200/300" alt="">
     {% endif %}
-    <a href="#" class="btn btn-primary">Go somewhere...</a>
+    <a href="#" class="btn btn-primary">Description</a>
   </div>
   <div class="card-footer text-muted">
       {{ item.created_at|date:"Y-m-d H:i:s"  }}

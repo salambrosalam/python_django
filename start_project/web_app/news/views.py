@@ -12,7 +12,7 @@ def index(request):
 
     context = {
         "news": news,
-        "title": "Список новостей",
+        "title": "Deliveries list",
         "categories": categories
     }
 
