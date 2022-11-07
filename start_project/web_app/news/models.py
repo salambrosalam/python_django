@@ -5,6 +5,9 @@ from django.db import models
 class News(models.Model):
     title = models.CharField(max_length=100, verbose_name="Name")
     content = models.TextField(blank=True, verbose_name="Content")
+    distance = models.TextField(blank=True, verbose_name="distance")
+    price = models.TextField(blank=True, verbose_name="price")
+    telefon = models.TextField(blank=True, verbose_name="telefon")
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Date")
     updated_at = models.DateTimeField(auto_now=True, verbose_name="Updates")
     photo = models.ImageField(upload_to="photos/%Y/%m/%d/", verbose_name="Image", blank=True)
