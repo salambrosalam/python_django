@@ -1,0 +1,22 @@
+name: Use python Django with Azure pipelines
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Azure Pipeline
+    runs-on: ubuntu-latest
+    steps:
+      - name: Azure pipeline action
+        uses: Azure/pipelines@v1
+        with:
+          azure-devops-project-url: 'https://dev.azure.com/serhiivitko16353/AgileProject'
+          azure-pipeline-name: 'salambrosalam.python_django'
+          azure-devops-token: '${{ secrets.AZURE_DEVOPS_TOKEN }}'
+          #azure-pipeline-variables: '{"variable1": "value1", "variable2": "value2"}' # optional stringified json
